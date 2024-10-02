@@ -86,14 +86,51 @@
 
 /**
  * Type
- * 
+ * interface có khả năng merge lại
+ * còn Type thì không thể merge
+ * bù lại Type có thể gộp hoặc Union
+ * => Nên dùng type hơn vì có thể gộp và Union , có những tiện ích của interface
  */
 
 // type State = {
 //   name: string;
 //   isLogin: boolean;
 // };
+
 // let state: State = {
 //   name: "Dang",
 //   isLogin: true,
 // };
+// type Name = {
+//   name: string;
+// };
+// type Age = {
+//   age: number;
+// };
+// type Person = Name & Age;
+// let state: Person = {
+//   name: "Dang",
+//   age: 33,
+// };
+
+/**
+ * Generic
+ */
+
+const handleClick = <Type>(value: Type) => value;
+handleClick<string>("3");
+/**
+ * Class
+ */
+
+// class Person {
+//   public name: string;
+//   age: number;
+//   constructor(name: string, age: number) {
+//     this.name = name;
+//     this.age = age;
+//   }
+// }
+
+// const alex = new Person("alex", 27);
+// alex.age
